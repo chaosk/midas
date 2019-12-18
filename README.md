@@ -1,8 +1,8 @@
 # Midas
 Dota 2 left-hand Ergodox keymap
 
-> Preserved through unknown magical means,
-> the Hand of Midas is a weapon of greed,
+> Preserved through unknown magical means, \
+> the Hand of Midas is a weapon of greed, \
 > sacrificing animals to line the owner's pockets.
 
 ## Prerequisites
@@ -11,7 +11,9 @@ Dota 2 left-hand Ergodox keymap
 
 ## Notes
 
-This keymap is made for an Ergodox PCB from [Falbatech]. It's the right side PCB, so [QMK's Swap Hands] functionality is used to flip the layout and avoid having to awkwardly mirror it manually.
+This keymap is made for an Ergodox PCB from [Falbatech].
+It's the right side PCB, so [QMK's Swap Hands] functionality is used
+to flip the layout and avoid having to awkwardly mirror it manually.
 
 ## Build
 
