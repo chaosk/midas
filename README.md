@@ -5,9 +5,9 @@ Dota 2 left-hand Ergodox keymap
 > the Hand of Midas is a weapon of greed, \
 > sacrificing animals to line the owner's pockets.
 
-## Prerequisites
+## Layout
 
-- docker
+![Midas keyboard layout](/layout.png?raw=true)
 
 ## Notes
 
@@ -15,13 +15,19 @@ This keymap is made for an Ergodox PCB from [Falbatech].
 It's the right side PCB, so [QMK's Swap Hands] functionality is used
 to flip the layout and avoid having to awkwardly mirror it manually.
 
-## Build
+## Usage
+
+### Prerequisites
+
+- docker
+
+### Build
 
 ```console
 $ make
 ```
 
-## Flash
+### Flash
 
 Put keyboard μC into programming mode, either by pressing the push button
 on the board itself, or by sending the `RESET` keycode.
