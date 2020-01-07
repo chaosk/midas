@@ -10,7 +10,7 @@
 
 #define BASE 0  // default layer
 #define SYMB 1  // symbols
-#define MDIA 2  // media keys
+#define NUMP 2  // numpad
 
 #define LAYOUT_ergodox_left_only(...) LAYOUT_ergodox(__VA_ARGS__, \
     XXXXXXX, \
@@ -81,7 +81,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
      * |XXXXXX   |XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|      |
      * |---------+------+------+------+------+------|      |
      * |XXXXXX   |XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|------|
-     * |---------+------+------+------+------+------|      |
+     * |---------+------+------+------+------+------|  L2  |
      * |XXXXXX   |XXXXXX|XXXXXX|XXXXXX|XXXXXX|XXXXXX|      |
      * `---------+------+------+------+------+-------------'
      *   |       |      |      |      |      |
@@ -98,44 +98,44 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         VRSN,       XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
         XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    KC_TRNS,
         XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,
-        XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    KC_TRNS,
+        XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    XXXXXXX,    TO(NUMP),
         KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    
 
                                                                     XXXXXXX,    RESET,
                                                                                 XXXXXXX,
                                                         KC_ENTER,   XXXXXXX,    XXXXXXX
     ),
-    /* Keymap 2: Media keys
+    /* Keymap 2: Numpad + extra functionality
      *
      * ,--------------------------------------------------.
      * |        |      |      |      |      |      |      |
      * |--------+------+------+------+------+-------------|
-     * |        |      |      |      |      |      |      |
+     * |   *    |   7  |   8  |   9  |      |      |      |
      * |--------+------+------+------+------+------|      |
-     * |  Play  |      |      |      |      |      |------|
-     * |--------+------+------+------+------+------|      |
-     * |        |      |      |      |      |      |      |
+     * |   -    |   4  |   5  |   6  |      |      |------|
+     * |--------+------+------+------+------+------| Togl |
+     * |   +    |   1  |   2  |   3  |      |      |  L2  |
      * `--------+------+------+------+------+-------------'
-     *   |      |      |      |      |      |
+     *   |      |   0  |  .   |      |      |
      *   `----------------------------------'
      *                                        ,-------------.
      *                                        |      |      |
      *                                 ,------|------|------|
      *                                 |      |      |      |
-     *                                 |      |      |------|
+     *                                 | Enter|      |------|
      *                                 |      |      |      |
      *                                 `--------------------'
      */
-    [MDIA] = LAYOUT_ergodox_left_only(
+    [NUMP] = LAYOUT_ergodox_left_only(
         KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,
-        KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,
-        KC_MPLY,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,
-        KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,
-        KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    KC_TRNS,    
+        KC_PAST,    KC_KP_7,    KC_KP_8,    KC_KP_9,    KC_TRNS,    KC_TRNS,    KC_TRNS,
+        KC_PMNS,    KC_KP_4,    KC_KP_5,    KC_KP_6,    KC_TRNS,    KC_TRNS,
+        KC_PPLS,    KC_KP_1,    KC_KP_2,    KC_KP_3,    KC_TRNS,    KC_TRNS,    TG(NUMP),
+        KC_TRNS,    KC_KP_0,    KC_PDOT,    KC_TRNS,    KC_TRNS,    
 
                                                                     KC_TRNS,    KC_TRNS,
                                                                                 KC_TRNS,
-                                                        KC_TRNS,    KC_TRNS,    KC_TRNS
+                                                        KC_ENTER,    KC_TRNS,    KC_TRNS
     ),
 };
 
